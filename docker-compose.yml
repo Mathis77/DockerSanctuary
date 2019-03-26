@@ -1,0 +1,8 @@
+version: '3'
+services:
+  ide:
+    image: 'codercom/code-server'
+    ports:
+      - "3333:8443"
+    volumes:
+      - "./stockage/code:/root/project"
