@@ -24,5 +24,9 @@ services:
   build:
     image: 'jenkins/jenkins:lts'
     ports:
-      - '3335:3335'
+      - '3335:8080'
       - '50000:50000'
+  testing:
+    image: 'sonarqube'
+    ports:
+      - '3336:9000'
