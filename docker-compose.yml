@@ -30,3 +30,16 @@ services:
     image: 'sonarqube'
     ports:
       - '3336:9000'
+  nexus:
+    image: 'sonatype/nexus3'
+    ports:
+      - '3337:8081'
+  dockerregistry:
+    image: 'registry'
+    ports:
+      - '3338:5000'
+    restart: always
+  nextcloud:
+    image: 'nextcloud'
+    ports:
+      - '3339:80'
